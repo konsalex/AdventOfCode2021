@@ -7,14 +7,14 @@ import (
 	"strconv"
 )
 
-type Actions string
+type actions string
 
 const (
-	increased Actions = "increased"
-	decreased Actions = "decreased"
+	increased actions = "increased"
+	decreased actions = "decreased"
 )
 
-func diff(val1 int, val2 int) Actions {
+func diff(val1 int, val2 int) actions {
 	if val2 > val1 {
 		return increased
 	}
@@ -58,7 +58,7 @@ func D1P1() {
 		}
 		*previous = number
 	}
-	fmt.Println("[Part 1]: Increased counter:", counter)
+	fmt.Println("[D1 - Part 1]: Increased counter:", counter)
 }
 
 func D1P2() {
@@ -98,5 +98,5 @@ func D1P2() {
 		}
 		index += 1
 	}
-	fmt.Println("[Part 2]: Increased counter:", counter)
+	fmt.Println("[D1 - Part 2]: Increased counter:", counter)
 }
